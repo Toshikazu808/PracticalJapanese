@@ -143,6 +143,7 @@
 		BC37E66D24C2B2D80015994C /* soundBasic41.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC37E63F24C2B2D80015994C /* soundBasic41.m4a */; };
 		BC37E66E24C2B2D80015994C /* soundBasic14.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC37E64024C2B2D80015994C /* soundBasic14.m4a */; };
 		BC37E66F24C2B2D80015994C /* soundBasic40.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC37E64124C2B2D80015994C /* soundBasic40.m4a */; };
+		BC51D1E525BE72070036DCE4 /* TableViewVocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC51D1E425BE72070036DCE4 /* TableViewVocab.swift */; };
 		BC53CC7124C75ECC00041364 /* soundCombo18.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC53CC6E24C75ECB00041364 /* soundCombo18.m4a */; };
 		BC53CC7224C75ECC00041364 /* soundCombo19.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC53CC6F24C75ECC00041364 /* soundCombo19.m4a */; };
 		BC53CC7324C75ECC00041364 /* soundCombo20.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC53CC7024C75ECC00041364 /* soundCombo20.m4a */; };
@@ -276,6 +277,8 @@
 		BCB6CDF024C0C51B00B765BE /* TransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6CDEF24C0C51B00B765BE /* TransitionAnimations.swift */; };
 		BCB6E3EF250D4A3A00458777 /* VerticalChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB6E3EE250D4A3A00458777 /* VerticalChartViewController.swift */; };
 		BCB8097E24BD2791005E52B6 /* GestureRecognizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB8097D24BD2791005E52B6 /* GestureRecognizers.swift */; };
+		BCBB95B025BE45F800CFEA56 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCBB95AF25BE45F800CFEA56 /* TableCell.xib */; };
+		BCBB95B325BE4A9600CFEA56 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBB95B225BE4A9600CFEA56 /* TableCell.swift */; };
 		BCBF2CD72506FA11006EDBB0 /* soundsColors1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCBF2CCC2506FA11006EDBB0 /* soundsColors1.m4a */; };
 		BCBF2CD82506FA11006EDBB0 /* soundsColors3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCBF2CCD2506FA11006EDBB0 /* soundsColors3.m4a */; };
 		BCBF2CD92506FA11006EDBB0 /* soundsColors4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCBF2CCE2506FA11006EDBB0 /* soundsColors4.m4a */; };
@@ -307,7 +310,6 @@
 		BCC39EFA2509B10B00CA596C /* soundsOceanAnimals15.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCC39EE52509B10B00CA596C /* soundsOceanAnimals15.m4a */; };
 		BCC39EFB2509B10B00CA596C /* soundsOceanAnimals14.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCC39EE62509B10B00CA596C /* soundsOceanAnimals14.m4a */; };
 		BCC39EFC2509B10B00CA596C /* soundsOceanAnimals13.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCC39EE72509B10B00CA596C /* soundsOceanAnimals13.m4a */; };
-		BCD5100525B89EC1007D885A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5100425B89EC1007D885A /* TableViewCell.swift */; };
 		BCD8B53D24C16C3400DBD408 /* KanjiSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD8B53C24C16C3400DBD408 /* KanjiSelectionViewController.swift */; };
 		BCEA9DE92509A74A00FF6E94 /* soundsAnimals21.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCEA9DC82509A74800FF6E94 /* soundsAnimals21.m4a */; };
 		BCEA9DEA2509A74A00FF6E94 /* soundsAnimals2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCEA9DC92509A74800FF6E94 /* soundsAnimals2.m4a */; };
@@ -483,6 +485,7 @@
 		BC37E63F24C2B2D80015994C /* soundBasic41.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundBasic41.m4a; sourceTree = "<group>"; };
 		BC37E64024C2B2D80015994C /* soundBasic14.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundBasic14.m4a; sourceTree = "<group>"; };
 		BC37E64124C2B2D80015994C /* soundBasic40.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundBasic40.m4a; sourceTree = "<group>"; };
+		BC51D1E425BE72070036DCE4 /* TableViewVocab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVocab.swift; sourceTree = "<group>"; };
 		BC53CC6E24C75ECB00041364 /* soundCombo18.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundCombo18.m4a; sourceTree = "<group>"; };
 		BC53CC6F24C75ECC00041364 /* soundCombo19.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundCombo19.m4a; sourceTree = "<group>"; };
 		BC53CC7024C75ECC00041364 /* soundCombo20.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundCombo20.m4a; sourceTree = "<group>"; };
@@ -618,6 +621,8 @@
 		BCB6CDEF24C0C51B00B765BE /* TransitionAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimations.swift; sourceTree = "<group>"; };
 		BCB6E3EE250D4A3A00458777 /* VerticalChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalChartViewController.swift; sourceTree = "<group>"; };
 		BCB8097D24BD2791005E52B6 /* GestureRecognizers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizers.swift; sourceTree = "<group>"; };
+		BCBB95AF25BE45F800CFEA56 /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		BCBB95B225BE4A9600CFEA56 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		BCBF2CCC2506FA11006EDBB0 /* soundsColors1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsColors1.m4a; sourceTree = "<group>"; };
 		BCBF2CCD2506FA11006EDBB0 /* soundsColors3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsColors3.m4a; sourceTree = "<group>"; };
 		BCBF2CCE2506FA11006EDBB0 /* soundsColors4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsColors4.m4a; sourceTree = "<group>"; };
@@ -649,7 +654,6 @@
 		BCC39EE52509B10B00CA596C /* soundsOceanAnimals15.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsOceanAnimals15.m4a; sourceTree = "<group>"; };
 		BCC39EE62509B10B00CA596C /* soundsOceanAnimals14.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsOceanAnimals14.m4a; sourceTree = "<group>"; };
 		BCC39EE72509B10B00CA596C /* soundsOceanAnimals13.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsOceanAnimals13.m4a; sourceTree = "<group>"; };
-		BCD5100425B89EC1007D885A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BCD8B53C24C16C3400DBD408 /* KanjiSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiSelectionViewController.swift; sourceTree = "<group>"; };
 		BCEA9DC82509A74800FF6E94 /* soundsAnimals21.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsAnimals21.m4a; sourceTree = "<group>"; };
 		BCEA9DC92509A74800FF6E94 /* soundsAnimals2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsAnimals2.m4a; sourceTree = "<group>"; };
@@ -885,7 +889,8 @@
 			children = (
 				BC5A584C24B53F6B00A06BBB /* LaunchScreen.storyboard */,
 				BC5A584724B53F6A00A06BBB /* Main.storyboard */,
-				BCD5100425B89EC1007D885A /* TableViewCell.swift */,
+				BCBB95AF25BE45F800CFEA56 /* TableCell.xib */,
+				BCBB95B225BE4A9600CFEA56 /* TableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -900,6 +905,7 @@
 				BC8834B124FE4EDA00D85DDD /* VocabCardStack.swift */,
 				BCA465E125AAA001002848ED /* SystemImageNames.swift */,
 				BCA465E425AAA549002848ED /* Constants.swift */,
+				BC51D1E425BE72070036DCE4 /* TableViewVocab.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1499,6 +1505,7 @@
 				BC06AC0225104E7F0051913A /* soundsHouse41.m4a in Resources */,
 				BC06AB7225104E3F0051913A /* soundsVegetables24.m4a in Resources */,
 				BCEA9E032509A74A00FF6E94 /* soundsAnimals13.m4a in Resources */,
+				BCBB95B025BE45F800CFEA56 /* TableCell.xib in Resources */,
 				BC06AB6D25104E3F0051913A /* soundsVegetables12.m4a in Resources */,
 				BCAA22892509E7CD0085A542 /* soundsNature33.m4a in Resources */,
 				BC06ABD925104E7F0051913A /* soundsHouse6.m4a in Resources */,
@@ -1596,6 +1603,7 @@
 			files = (
 				BC9A513424B9127300C70E9D /* HiraganaKatakanaCardStacks.swift in Sources */,
 				BC5A584624B53F6A00A06BBB /* HomeViewController.swift in Sources */,
+				BC51D1E525BE72070036DCE4 /* TableViewVocab.swift in Sources */,
 				BC8834AE24FE46C700D85DDD /* VocabSelectionViewController.swift in Sources */,
 				BC37207324B79C2A004BBDE9 /* HiraganaViewController.swift in Sources */,
 				BCEDD99C24BA5CE900A39339 /* Cards.swift in Sources */,
@@ -1612,11 +1620,11 @@
 				BC8834B224FE4EDA00D85DDD /* VocabCardStack.swift in Sources */,
 				BC5A9BEA24BFFE2800E43460 /* ComingSoonViewController.swift in Sources */,
 				BCB6E3EF250D4A3A00458777 /* VerticalChartViewController.swift in Sources */,
+				BCBB95B325BE4A9600CFEA56 /* TableCell.swift in Sources */,
 				BC054AAA259003CF005EDCF4 /* SampleViewController.swift in Sources */,
 				BC8834B024FE4CC400D85DDD /* VocabViewController.swift in Sources */,
 				BC5A9BE824BF70B000E43460 /* ChartViewController.swift in Sources */,
 				BCB2979025B75A8A00B1C927 /* ThankYouViewController.swift in Sources */,
-				BCD5100525B89EC1007D885A /* TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

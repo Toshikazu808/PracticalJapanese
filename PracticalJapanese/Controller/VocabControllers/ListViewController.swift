@@ -11,83 +11,119 @@ import AVFoundation
 
 class ListViewController: UIViewController {
     
+    @IBOutlet weak var listLabel: UILabel!
+    @IBOutlet weak var speakerButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    var vocabList:[String] = []
-    var vocabSoundsList:[String] = []
     let cards = Cards()
     var images:[UIImage] = []
+    
+    var tableContent:[TableViewVocab] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = UIColor.black
+        speakerButton.alpha = 0
         cardStack = VocabCardStack().getCards()
+        
+        tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         
         switch Constants.vocabStackSelection {
         case 0:
             print("\nCreating list for \(Constants.stackOrder[Constants.vocabStackSelection])")
             for i in 0..<cardStack.count {
-                vocabList.append("\(Constants.colorStack[i])")
-                vocabSoundsList.append("\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
-                images.append(UIImage(named: "\(cardStack[i].cardName)")!)
+                let cellContent = TableViewVocab(
+                    japaneseWord: Constants.colorStackJ[i],
+                    englishWord: Constants.colorStack[i],
+                    vocabImage: UIImage(named: "\(cards.vocabFront[Constants.vocabStackSelection])\(i)")!,
+                    vocabSound: "\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
+                tableContent.append(cellContent)
             }
-            print(images)
+            listLabel.text = "Colors"
         case 1:
             print("\nCreating list for \(Constants.stackOrder[Constants.vocabStackSelection])")
             for i in 0..<cardStack.count {
-                vocabList.append("\(Constants.animalStack[i])")
-                vocabSoundsList.append("\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
-                images.append(UIImage(named: "\(cardStack[i].cardName)")!)
+                let cellContent = TableViewVocab(
+                    japaneseWord: Constants.animalStackJ[i],
+                    englishWord: Constants.animalStack[i],
+                    vocabImage: UIImage(named: "\(cards.vocabFront[Constants.vocabStackSelection])\(i)")!,
+                    vocabSound: "\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
+                tableContent.append(cellContent)
             }
+            listLabel.text = "Animals"
         case 2:
             print("\nCreating list for \(Constants.stackOrder[Constants.vocabStackSelection])")
             for i in 0..<cardStack.count {
-                vocabList.append("\(Constants.oceanAnimalStack[i])")
-                vocabSoundsList.append("\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
-                images.append(UIImage(named: "\(cardStack[i].cardName)")!)
+                let cellContent = TableViewVocab(
+                    japaneseWord: Constants.oceanAnimalStackJ[i],
+                    englishWord: Constants.oceanAnimalStack[i],
+                    vocabImage: UIImage(named: "\(cards.vocabFront[Constants.vocabStackSelection])\(i)")!,
+                    vocabSound: "\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
+                tableContent.append(cellContent)
             }
+            listLabel.text = "Ocean Animals"
         case 3:
             print("\nCreating list for \(Constants.stackOrder[Constants.vocabStackSelection])")
             for i in 0..<cardStack.count {
-                vocabList.append("\(Constants.natureStack[i])")
-                vocabSoundsList.append("\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
-                images.append(UIImage(named: "\(cardStack[i].cardName)")!)
+                let cellContent = TableViewVocab(
+                    japaneseWord: Constants.natureStackJ[i],
+                    englishWord: Constants.natureStack[i],
+                    vocabImage: UIImage(named: "\(cards.vocabFront[Constants.vocabStackSelection])\(i)")!,
+                    vocabSound: "\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
+                tableContent.append(cellContent)
             }
+            listLabel.text = "Nature"
         case 4:
             print("\nCreating list for \(Constants.stackOrder[Constants.vocabStackSelection])")
             for i in 0..<cardStack.count {
-                vocabList.append("\(Constants.bugStack[i])")
-                vocabSoundsList.append("\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
-                images.append(UIImage(named: "\(cardStack[i].cardName)")!)
+                let cellContent = TableViewVocab(
+                    japaneseWord: Constants.bugStackJ[i],
+                    englishWord: Constants.bugStack[i],
+                    vocabImage: UIImage(named: "\(cards.vocabFront[Constants.vocabStackSelection])\(i)")!,
+                    vocabSound: "\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
+                tableContent.append(cellContent)
             }
+            listLabel.text = "Bugs"
         case 5:
             print("\nCreating list for \(Constants.stackOrder[Constants.vocabStackSelection])")
             for i in 0..<cardStack.count {
-                vocabList.append("\(Constants.vegetableStack[i])")
-                vocabSoundsList.append("\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
-                images.append(UIImage(named: "\(cardStack[i].cardName)")!)
+                let cellContent = TableViewVocab(
+                    japaneseWord: Constants.vegetableStackJ[i],
+                    englishWord: Constants.vegetableStack[i],
+                    vocabImage: UIImage(named: "\(cards.vocabFront[Constants.vocabStackSelection])\(i)")!,
+                    vocabSound: "\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
+                tableContent.append(cellContent)
             }
+            listLabel.text = "Vegetables"
         case 6:
             print("\nCreating list for \(Constants.stackOrder[Constants.vocabStackSelection])")
             for i in 0..<cardStack.count {
-                vocabList.append("\(Constants.fruitStack[i])")
-                vocabSoundsList.append("\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
-                images.append(UIImage(named: "\(cardStack[i].cardName)")!)
+                let cellContent = TableViewVocab(
+                    japaneseWord: Constants.fruitStackJ[i],
+                    englishWord: Constants.fruitStack[i],
+                    vocabImage: UIImage(named: "\(cards.vocabFront[Constants.vocabStackSelection])\(i)")!,
+                    vocabSound: "\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
+                tableContent.append(cellContent)
             }
+            listLabel.text = "Fruits"
         case 7:
             print("\nCreating list for \(Constants.stackOrder[Constants.vocabStackSelection])")
             for i in 0..<cardStack.count {
-                vocabList.append("\(Constants.houseStack[i])")
-                vocabSoundsList.append("\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
-                images.append(UIImage(named: "\(cardStack[i].cardName)")!)
+                let cellContent = TableViewVocab(
+                    japaneseWord: Constants.houseStackJ[i],
+                    englishWord: Constants.houseStack[i],
+                    vocabImage: UIImage(named: "\(cards.vocabFront[Constants.vocabStackSelection])\(i)")!,
+                    vocabSound: "\(cards.vocabSounds[Constants.vocabStackSelection])\(i)")
+                tableContent.append(cellContent)
             }
+            listLabel.text = "House"
         default:
             print("Unregistered selection")
             break
         }
         
-        self.tableView.register(TableViewCell.self, forCellReuseIdentifier: "ImageViewCell")
-
     } // End of viewDidLoad
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -109,46 +145,45 @@ class ListViewController: UIViewController {
     } // End of @IBAction func backButtonTapped
        
 
+    @IBAction func speakerButtonTapped(_ sender: UIButton) {
+        speakerButton.setImage(UIImage(named: "speaker.wave.2"), for: UIControl.State.normal)
+        speakerButton.isHidden = false
+        speakerButton.alpha = 1
+//        if Constants.soundOn == false {
+//            Constants.soundOn = true
+//            speakerButton.setImage(UIImage(named: SystemImageNames.speakerWave), for: .normal)
+//            speakerButton.alpha = 0.8
+//        } else {
+//            Constants.soundOn = false
+//            speakerButton.setImage(UIImage(named: SystemImageNames.speakerSlash), for: .normal)
+//            speakerButton.alpha = 0.8
+//        }
+    } // End of @IBAction func speakerButtonTapped
+    
 } // End of class listViewController
 
 
+
+extension ListViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableContent.count
+    } // End of func tableView
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let content = tableContent[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! TableCell
+        
+        cell.japaneseTextLabel?.text = content.japaneseWord
+        cell.englishTextLabel?.text = content.englishWord
+        cell.cardImageView?.image = content.vocabImage
+        
+        return cell
+    } // End of func tableView
+}
 
 
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped me!")
-        
     } // End of func tableView
 } // End of extension ListViewController
-
-
-extension ListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vocabList.count
-    } // End of func tableView
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cell, for: indexPath) as! TableViewCell
-        cell.textLabel?.text = vocabList[indexPath.row]
-        cell.mainImageView.image = images[indexPath.row]
-        return cell
-    } // End of func tableView
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let currentImage = images[indexPath.row]
-        let imageCrop = currentImage.getCropRatio()
-        return tableView.frame.width / imageCrop
-    } // End of func tableView
-    
-} // End of extension ListViewController
-
-
-extension UIImage {
-    func getCropRatio() -> CGFloat {
-        let widthRatio = self.size.width / self.size.height
-        return widthRatio
-    }
-} // End of extension UIImage

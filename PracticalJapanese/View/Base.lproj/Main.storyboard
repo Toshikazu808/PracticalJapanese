@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1007,7 +1006,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xik-Lo-x6E">
                                 <rect key="frame" x="0.0" y="129" width="414" height="767"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="onf-8g-Vzs">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
@@ -1019,22 +1018,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkD-0w-fMW">
+                                <rect key="frame" x="349" y="65.666666666666671" width="25" height="27"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="speaker.slash" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
+                                </state>
+                                <connections>
+                                    <action selector="speakerButtonTapped:" destination="flh-pf-Mr4" eventType="touchUpInside" id="TS3-tq-mRl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gun-e8-VQM"/>
                         <color key="backgroundColor" red="0.1096651114" green="0.1096651114" blue="0.1096651114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gun-e8-VQM" firstAttribute="trailing" secondItem="wkD-0w-fMW" secondAttribute="trailing" constant="40" id="IkD-jo-DLW"/>
                             <constraint firstItem="2V5-Tf-vJH" firstAttribute="top" secondItem="gun-e8-VQM" secondAttribute="top" constant="15" id="LFf-CD-CgM"/>
                             <constraint firstItem="xik-Lo-x6E" firstAttribute="leading" secondItem="gun-e8-VQM" secondAttribute="leading" id="Mko-TX-uyZ"/>
                             <constraint firstItem="2V5-Tf-vJH" firstAttribute="leading" secondItem="gun-e8-VQM" secondAttribute="leading" constant="40" id="RcD-di-SH3"/>
                             <constraint firstItem="1ZQ-9L-vz5" firstAttribute="centerX" secondItem="w9z-MD-Xhd" secondAttribute="centerX" id="atK-Pb-u1i"/>
                             <constraint firstItem="xik-Lo-x6E" firstAttribute="trailing" secondItem="gun-e8-VQM" secondAttribute="trailing" id="hLW-HG-qo7"/>
                             <constraint firstItem="2V5-Tf-vJH" firstAttribute="width" secondItem="2V5-Tf-vJH" secondAttribute="height" multiplier="1:1" id="iWD-2b-BYN"/>
+                            <constraint firstItem="wkD-0w-fMW" firstAttribute="centerY" secondItem="2V5-Tf-vJH" secondAttribute="centerY" id="jPO-8d-cqE"/>
                             <constraint firstItem="1ZQ-9L-vz5" firstAttribute="centerY" secondItem="2V5-Tf-vJH" secondAttribute="centerY" id="nK8-Bl-Xp3"/>
                             <constraint firstAttribute="bottom" secondItem="xik-Lo-x6E" secondAttribute="bottom" id="npS-J3-IpT"/>
                             <constraint firstItem="xik-Lo-x6E" firstAttribute="top" secondItem="2V5-Tf-vJH" secondAttribute="bottom" constant="30" id="oQ1-It-YhH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="listLabel" destination="1ZQ-9L-vz5" id="rD8-n8-l9y"/>
+                        <outlet property="speakerButton" destination="wkD-0w-fMW" id="3cI-Ox-SDh"/>
                         <outlet property="tableView" destination="xik-Lo-x6E" id="Ce9-LW-20P"/>
                     </connections>
                 </viewController>
@@ -5113,10 +5126,8 @@
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
+        <image name="speaker.slash" catalog="system" width="124" height="128"/>
         <image name="speaker.wave.2" catalog="system" width="128" height="90"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
