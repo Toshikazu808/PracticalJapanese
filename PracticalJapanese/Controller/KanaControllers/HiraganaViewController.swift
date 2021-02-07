@@ -25,8 +25,8 @@ class HiraganaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Constants.viewControllerNumber = 1
-        Constants.stackIndicator = Cards().basicStack
+        K.viewControllerNumber = 1
+        K.stackIndicator = Cards().basicStack
         
         cardStack =  HiraganaKatakanaCardStacks().getCards()
         for i in 0..<cardStack.count {
@@ -91,11 +91,11 @@ class HiraganaViewController: UIViewController {
     
     @IBAction func homeButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        Constants.viewControllerNumber = 0
-        Constants.stackIndicator = 0
-        Constants.showFront = true
-        Constants.vocabStackSelection = 0
-        Constants.stackTotal = 0
+        K.viewControllerNumber = 0
+        K.stackIndicator = 0
+        K.showFront = true
+        K.vocabStackSelection = 0
+        K.stackTotal = 0
     } // End of func homeButtonTapped
     
     
@@ -114,7 +114,7 @@ class HiraganaViewController: UIViewController {
         cardStack = HiraganaKatakanaCardStacks().getCards()
         frontCardImageView.image = UIImage(named: cardStack[0].cardName)
         backCardImageView.image = UIImage(named: cardStack[1].cardName)
-        Constants.showFront = true
+        K.showFront = true
         checkImageView.alpha = 0
         backCardImageView.alpha = 0
         frontView.center = CGPoint(x: view.center.x, y: view.center.y)
@@ -140,11 +140,11 @@ class HiraganaViewController: UIViewController {
     @IBAction func buttonSelection(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            Constants.stackIndicator = Cards().basicStack
+            K.stackIndicator = Cards().basicStack
         case 2:
-            Constants.stackIndicator = Cards().tentenStack
+            K.stackIndicator = Cards().tentenStack
         case 3:
-            Constants.stackIndicator = Cards().comboStack
+            K.stackIndicator = Cards().comboStack
         case 4:
             cardStack =  HiraganaKatakanaCardStacks().getCards()
         default:
@@ -153,7 +153,7 @@ class HiraganaViewController: UIViewController {
         cardStack =  HiraganaKatakanaCardStacks().getCards()
         frontCardImageView.image = UIImage(named: cardStack[0].cardName)
         backCardImageView.image = UIImage(named: cardStack[1].cardName)
-        Constants.showFront = true
+        K.showFront = true
     } // End of @IBAction func buttonSelection
 
     
@@ -162,7 +162,7 @@ class HiraganaViewController: UIViewController {
         frontCardImageView.image = UIImage(named: cardStack[0].cardName)
         backCardImageView.image = UIImage(named: cardStack[1].cardName)
         print(cardStack[0].soundName)
-        Constants.showFront = true
+        K.showFront = true
     } // End of func shuffleAllTapped
     
     

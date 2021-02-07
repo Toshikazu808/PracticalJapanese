@@ -16,19 +16,24 @@ import AVFoundation
 class HomeViewController: UIViewController {
     
     @IBOutlet var menuButtons: [UIButton]!
+    @IBOutlet weak var stackView: UIStackView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Constants.viewControllerNumber = 0
+        K.viewControllerNumber = 0
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let stackWidth = screenWidth / 2
         
         for i in 0..<menuButtons.count {
             menuButtons[i].backgroundColor = UIColor.lightGray
             menuButtons[i].layer.cornerRadius = 11
-            menuButtons[i].layer.borderWidth = 0
+            menuButtons[i].layer.borderColor = UIColor.white.cgColor
+            menuButtons[i].layer.borderWidth = 2
             menuButtons[i].alpha = 1
         }
+        stackView.frame.size.width = stackWidth
         
     } // End of func viewDidLoad()
     override func viewWillAppear(_ animated: Bool) {

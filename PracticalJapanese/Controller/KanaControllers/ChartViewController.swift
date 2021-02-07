@@ -6,6 +6,8 @@
 //  Copyright © 2020 Ryan Kanno. All rights reserved.
 //
 
+// VIEW CONTROLLER FOR THIS FILE HAS BEEN DELETED
+
 import UIKit
 import AVFoundation
 
@@ -41,9 +43,9 @@ class ChartViewController: UIViewController {
             characterImagesTapped[i]?.numberOfTapsRequired = 1
             characterImages[i].addGestureRecognizer(characterImagesTapped[i]!)
             
-            if Constants.viewControllerNumber == 1 {
+            if K.viewControllerNumber == 1 {
                 characterImages[i].image = UIImage(named: "Hbasic\(i)")
-            } else if Constants.viewControllerNumber == 2 {
+            } else if K.viewControllerNumber == 2 {
                 characterImages[i].image = UIImage(named: "Kbasic\(i)")
             }
         }

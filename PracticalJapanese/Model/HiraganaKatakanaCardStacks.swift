@@ -18,7 +18,7 @@ class HiraganaKatakanaCardStacks {
         var generatedNumbersArray = [Int]()
         var generatedCardArray = [Cards]()
         
-        generateArrays(&generatedNumbersArray, &generatedCardArray, stackIndicator: Constants.stackIndicator)
+        generateArrays(&generatedNumbersArray, &generatedCardArray, stackIndicator: K.stackIndicator)
         randomizeArray(&generatedCardArray)
         
         return generatedCardArray
@@ -27,16 +27,16 @@ class HiraganaKatakanaCardStacks {
     
     fileprivate func generateArrays(_ generatedNumbersArray: inout [Int], _ generatedCardArray: inout [Cards], stackIndicator: Int) -> Void {
         // Randomly generate number of cards based on which stack is chosen
-        while generatedNumbersArray.count < Constants.stackIndicator {
-            let randomNumber:Int = Int(arc4random_uniform(UInt32(Constants.stackIndicator)))
+        while generatedNumbersArray.count < K.stackIndicator {
+            let randomNumber:Int = Int(arc4random_uniform(UInt32(K.stackIndicator)))
             print(randomNumber)
             
             if generatedNumbersArray.contains(randomNumber) == false {
                 generatedNumbersArray.append(randomNumber)
                 let cards = Cards()
                 
-                if Constants.viewControllerNumber == 1 {
-                    switch Constants.stackIndicator {
+                if K.viewControllerNumber == 1 {
+                    switch K.stackIndicator {
                     case Cards().basicStack:
                         cards.cardName = "Hbasic\(randomNumber)"
                         cards.cardBack = "basicBack\(randomNumber)"
@@ -58,8 +58,8 @@ class HiraganaKatakanaCardStacks {
                     default:
                         break
                     }
-                } else if Constants.viewControllerNumber == 2 {
-                    switch Constants.stackIndicator {
+                } else if K.viewControllerNumber == 2 {
+                    switch K.stackIndicator {
                     case Cards().basicStack:
                         cards.cardName = "Kbasic\(randomNumber)"
                         cards.cardBack = "basicBack\(randomNumber)"
@@ -130,12 +130,12 @@ class HiraganaKatakanaCardStacks {
                 generateNumbersArrayOne.append(randomNumber)
                 let cards = Cards()
                 
-                if Constants.viewControllerNumber == 1 {
+                if K.viewControllerNumber == 1 {
                     cards.cardName = "Hbasic\(randomNumber)"
                     cards.cardBack = "basicBack\(randomNumber)"
                     generatedCardArrayOne.append(cards)
                     cards.soundName = "soundBasic\(randomNumber)"
-                } else if Constants.viewControllerNumber == 2 {
+                } else if K.viewControllerNumber == 2 {
                     cards.cardName = "Kbasic\(randomNumber)"
                     cards.cardBack = "basicBack\(randomNumber)"
                     generatedCardArrayOne.append(cards)
@@ -158,12 +158,12 @@ class HiraganaKatakanaCardStacks {
                 generateNumbersArrayTwo.append(randomNumber)
                 let cards = Cards()
                 
-                if Constants.viewControllerNumber == 1 {
+                if K.viewControllerNumber == 1 {
                     cards.cardName = "Htenten\(randomNumber)"
                     cards.cardBack = "tentenBack\(randomNumber)"
                     generatedCardArrayTwo.append(cards)
                     cards.soundName = "soundTenten\(randomNumber)"
-                } else if Constants.viewControllerNumber == 2 {
+                } else if K.viewControllerNumber == 2 {
                     cards.cardName = "Ktenten\(randomNumber)"
                     cards.cardBack = "tentenBack\(randomNumber)"
                     generatedCardArrayTwo.append(cards)
@@ -186,12 +186,12 @@ class HiraganaKatakanaCardStacks {
                 generateNumbersArrayThree.append(randomNumber)
                 let cards = Cards()
                 
-                if Constants.viewControllerNumber == 1 {
+                if K.viewControllerNumber == 1 {
                     cards.cardName = "Hcombo\(randomNumber)"
                     cards.cardBack = "comboBack\(randomNumber)"
                     generatedCardArrayThree.append(cards)
                     cards.soundName = "soundCombo\(randomNumber)"
-                } else if Constants.viewControllerNumber == 2 {
+                } else if K.viewControllerNumber == 2 {
                     cards.cardName = "Kcombo\(randomNumber)"
                     cards.cardBack = "comboBack\(randomNumber)"
                     generatedCardArrayThree.append(cards)

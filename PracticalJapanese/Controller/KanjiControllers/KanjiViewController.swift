@@ -20,7 +20,7 @@ class KanjiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Constants.viewControllerNumber = 3
+        K.viewControllerNumber = 3
         
         frontCardImageView.layer.cornerRadius = 10
         frontCardImageView.layer.borderWidth = 0
@@ -50,16 +50,16 @@ class KanjiViewController: UIViewController {
     
     @objc func flipCard(_ sender: UITapGestureRecognizer) {
         //TODO: change flashcard stack to different images
-        if Constants.showFront == true {
+        if K.showFront == true {
             let image = UIImage(named: "Zkanji0reading")
             frontCardImageView.image = image
             UIView.transition(with: frontCardImageView, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-            Constants.showFront = false
+            K.showFront = false
         } else {
             let image = UIImage(named: "Zkanji0")
             frontCardImageView.image = image
             UIView.transition(with: frontCardImageView, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-            Constants.showFront = true
+            K.showFront = true
         }
     } // End of func flipCard
     

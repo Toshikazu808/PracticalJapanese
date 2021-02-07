@@ -42,7 +42,7 @@ class KanjiSelectionViewController: UIViewController {
     
     @IBAction func homeButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        Constants.viewControllerNumber = 0
+        K.viewControllerNumber = 0
         Cards().kanjiLevel = 0
     }
     

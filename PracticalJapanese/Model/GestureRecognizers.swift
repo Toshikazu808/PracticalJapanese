@@ -51,7 +51,7 @@ struct GestureRecognizers {
                     card.center = CGPoint(x: view.center.x, y: view.center.y)
                     backCardImageView.image = UIImage(named: cardStack[1].cardName)
                 })
-                Constants.showFront = true
+                K.showFront = true
                 return
             } else if card.center.x > (view.frame.width - 75) {
                 // Move off to the RIGHT SIDE of the screen
@@ -78,7 +78,7 @@ struct GestureRecognizers {
                             backCardImageView.image = UIImage(named: "FinalCard")
                         }
                     })
-                    Constants.showFront = true
+                    K.showFront = true
                     return
                 } else if cardStack.count == 2 {
                     UIView.animate(withDuration: 0.3) {
@@ -86,7 +86,7 @@ struct GestureRecognizers {
                     }
                     cardStack.remove(at: 0)
                     checkImageView.alpha = 0
-                    Constants.showFront = true
+                    K.showFront = true
                     return
                 }
                 // End of if else CARD MOVED LEFT OR RIGHT
@@ -102,14 +102,14 @@ struct GestureRecognizers {
     
     
     mutating func flipCard(frontCardImageView: UIImageView, cardSpeaker: UIImageView) -> Void {
-        if Constants.showFront == true {
+        if K.showFront == true {
             let image = UIImage(named: "\(cardStack[0].cardBack)")
             frontCardImageView.image = image
             UIView.transition(with: frontCardImageView, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             timer = Timer.scheduledTimer(withTimeInterval: 0.127, repeats: false, block: { (timer) in
                 cardSpeaker.alpha = 1
             })
-            Constants.showFront = false
+            K.showFront = false
         } else {
             let image = UIImage(named: "\(cardStack[0].cardName)")
             frontCardImageView.image = image
@@ -117,7 +117,7 @@ struct GestureRecognizers {
             timer = Timer.scheduledTimer(withTimeInterval: 0.127, repeats: false, block: { (timer) in
                 cardSpeaker.alpha = 0
             })
-            Constants.showFront = true
+            K.showFront = true
         }
     } // End of func flipCards
     
@@ -129,7 +129,7 @@ struct GestureRecognizers {
             soundFile = try AVAudioPlayer(contentsOf: url!)
             soundFile?.play()
         } catch {
-            print("\nError playing sound")
+            print("\nError playing sound \(error)")
         }
     } // End of func tapForSound
     

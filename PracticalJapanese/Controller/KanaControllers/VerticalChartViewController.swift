@@ -23,17 +23,17 @@ class VerticalChartViewController: UIViewController {
         super.viewDidLoad()
 
         for i in 0..<characterButtons.count {
-            if Constants.viewControllerNumber == 1 {
+            if K.viewControllerNumber == 1 {
                 if let buttonImage = UIImage(named: "Hbasic\(i)") {
                     characterButtons[i].setImage(buttonImage, for: .normal)
                 }
-            } else if Constants.viewControllerNumber == 2 {
+            } else if K.viewControllerNumber == 2 {
                 if let buttonImage = UIImage(named: "Kbasic\(i)") {
                     characterButtons[i].setImage(buttonImage, for: .normal)
                 }
             }
             characterButtons[i].alpha = 1
-            characterButtons[i].layer.cornerRadius = 15
+            characterButtons[i].layer.cornerRadius = 10
             characterButtons[i].layer.borderWidth = 0
         }
         for i in 0..<blankSpaceButtons.count {
@@ -59,6 +59,7 @@ class VerticalChartViewController: UIViewController {
         do {
             soundFile = try AVAudioPlayer(contentsOf: url!)
             soundFile?.play()
+            print("Playing sound file: \(String(describing: soundFile))")
         } catch {
             print("\nError playing sound")
         }

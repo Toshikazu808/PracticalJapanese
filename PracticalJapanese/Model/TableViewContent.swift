@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct TableViewVocab {
+struct TableViewContent {
     let japaneseWord: String
     let englishWord: String
     let vocabImage: UIImage

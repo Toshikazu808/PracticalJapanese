@@ -15,7 +15,7 @@ class VocabCardStack {
         var generatedNumbersArray = [Int]()
         var generatedCardArray = [Cards]()
         
-        generateArrays(&generatedNumbersArray, &generatedCardArray, vocabSelection: Constants.vocabStackSelection)
+        generateArrays(&generatedNumbersArray, &generatedCardArray, vocabSelection: K.vocabStackSelection)
         randomizeArray(&generatedCardArray)
         
         return generatedCardArray
@@ -24,61 +24,61 @@ class VocabCardStack {
     
     fileprivate func generateArrays(_ generatedNumbersArray: inout [Int], _ generatedCardArray: inout [Cards], vocabSelection: Int) -> Void {
         // MARK:- CHECK WHILE LOOP
-        while generatedNumbersArray.count < Constants.stackTotal {
-            let randomNumber:Int = Int(arc4random_uniform(UInt32(Constants.stackTotal)))
+        while generatedNumbersArray.count < K.stackTotal {
+            let randomNumber:Int = Int(arc4random_uniform(UInt32(K.stackTotal)))
             
             if generatedNumbersArray.contains(randomNumber) == false {
                 generatedNumbersArray.append(randomNumber)
                 let cards = Cards()
                 
-                switch Constants.vocabStackSelection {
+                switch K.vocabStackSelection {
                 case 0:
-                    cards.cardName = "\(cards.vocabFront[Constants.vocabStackSelection])\(randomNumber)"
-                    cards.cardBack = "\(cards.vocabBack[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.cardName = "\(cards.vocabFront[K.vocabStackSelection])\(randomNumber)"
+                    cards.cardBack = "\(cards.vocabBack[K.vocabStackSelection])\(randomNumber)"
                     generatedCardArray.append(cards)
-                    cards.soundName = "\(cards.vocabSounds[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.soundName = "\(cards.vocabSounds[K.vocabStackSelection])\(randomNumber)"
                     
                 case 1:
-                    cards.cardName = "\(cards.vocabFront[Constants.vocabStackSelection])\(randomNumber)"
-                    cards.cardBack = "\(cards.vocabBack[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.cardName = "\(cards.vocabFront[K.vocabStackSelection])\(randomNumber)"
+                    cards.cardBack = "\(cards.vocabBack[K.vocabStackSelection])\(randomNumber)"
                     generatedCardArray.append(cards)
-                    cards.soundName = "\(cards.vocabSounds[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.soundName = "\(cards.vocabSounds[K.vocabStackSelection])\(randomNumber)"
                     
                 case 2:
-                    cards.cardName = "\(cards.vocabFront[Constants.vocabStackSelection])\(randomNumber)"
-                    cards.cardBack = "\(cards.vocabBack[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.cardName = "\(cards.vocabFront[K.vocabStackSelection])\(randomNumber)"
+                    cards.cardBack = "\(cards.vocabBack[K.vocabStackSelection])\(randomNumber)"
                     generatedCardArray.append(cards)
-                    cards.soundName = "\(cards.vocabSounds[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.soundName = "\(cards.vocabSounds[K.vocabStackSelection])\(randomNumber)"
                     
                 case 3:
-                    cards.cardName = "\(cards.vocabFront[Constants.vocabStackSelection])\(randomNumber)"
-                    cards.cardBack = "\(cards.vocabBack[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.cardName = "\(cards.vocabFront[K.vocabStackSelection])\(randomNumber)"
+                    cards.cardBack = "\(cards.vocabBack[K.vocabStackSelection])\(randomNumber)"
                     generatedCardArray.append(cards)
-                    cards.soundName = "\(cards.vocabSounds[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.soundName = "\(cards.vocabSounds[K.vocabStackSelection])\(randomNumber)"
                     
                 case 4:
-                    cards.cardName = "\(cards.vocabFront[Constants.vocabStackSelection])\(randomNumber)"
-                    cards.cardBack = "\(cards.vocabBack[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.cardName = "\(cards.vocabFront[K.vocabStackSelection])\(randomNumber)"
+                    cards.cardBack = "\(cards.vocabBack[K.vocabStackSelection])\(randomNumber)"
                     generatedCardArray.append(cards)
-                    cards.soundName = "\(cards.vocabSounds[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.soundName = "\(cards.vocabSounds[K.vocabStackSelection])\(randomNumber)"
                     
                 case 5:
-                    cards.cardName = "\(cards.vocabFront[Constants.vocabStackSelection])\(randomNumber)"
-                    cards.cardBack = "\(cards.vocabBack[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.cardName = "\(cards.vocabFront[K.vocabStackSelection])\(randomNumber)"
+                    cards.cardBack = "\(cards.vocabBack[K.vocabStackSelection])\(randomNumber)"
                     generatedCardArray.append(cards)
-                    cards.soundName = "\(cards.vocabSounds[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.soundName = "\(cards.vocabSounds[K.vocabStackSelection])\(randomNumber)"
                     
                 case 6:
-                    cards.cardName = "\(cards.vocabFront[Constants.vocabStackSelection])\(randomNumber)"
-                    cards.cardBack = "\(cards.vocabBack[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.cardName = "\(cards.vocabFront[K.vocabStackSelection])\(randomNumber)"
+                    cards.cardBack = "\(cards.vocabBack[K.vocabStackSelection])\(randomNumber)"
                     generatedCardArray.append(cards)
-                    cards.soundName = "\(cards.vocabSounds[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.soundName = "\(cards.vocabSounds[K.vocabStackSelection])\(randomNumber)"
                     
                 case 7:
-                    cards.cardName = "\(cards.vocabFront[Constants.vocabStackSelection])\(randomNumber)"
-                    cards.cardBack = "\(cards.vocabBack[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.cardName = "\(cards.vocabFront[K.vocabStackSelection])\(randomNumber)"
+                    cards.cardBack = "\(cards.vocabBack[K.vocabStackSelection])\(randomNumber)"
                     generatedCardArray.append(cards)
-                    cards.soundName = "\(cards.vocabSounds[Constants.vocabStackSelection])\(randomNumber)"
+                    cards.soundName = "\(cards.vocabSounds[K.vocabStackSelection])\(randomNumber)"
                     
                 default:
                     break

@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct Constants {
+struct K {
     
     static var viewControllerNumber:Int = 0
     static var shuffleAll:Bool = false
@@ -25,6 +25,13 @@ struct Constants {
     static let cell:String = "cell"
     static let cellNibName:String = "TableCell"
     static let cellIdentifier:String = "ReusableCell"
+    
+    static let buttonCellNibName:String = "VocabButtonCell"
+    static let buttonCellIdentifier:String = "vocabCell"
+    static let vocabButtonSelection:[String] = [
+        "Colors", "Animals", "Ocean Animals", "Nature",
+        "Bugs", "Vegetables", "Fuits", "House"
+    ]
     
     static let stackOrder:[String] = [
         "colorStack", "animalStack", "oceanAnimalStack", "natureStack", "bugStack",

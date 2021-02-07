@@ -87,11 +87,11 @@ class VocabViewController: UIViewController {
 
     @IBAction func backButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-        Constants.viewControllerNumber = 0
-        Constants.stackIndicator = 0
-        Constants.showFront = true
-        Constants.vocabStackSelection = 0
-        Constants.stackTotal = 0
+        K.viewControllerNumber = 0
+        K.stackIndicator = 0
+        K.showFront = true
+        K.vocabStackSelection = 0
+        K.stackTotal = 0
         // Reset the number of cards in the stack
         
         
@@ -114,7 +114,7 @@ class VocabViewController: UIViewController {
         cardStack = VocabCardStack().getCards()
         frontCardImageView.image = UIImage(named: cardStack[0].cardName)
         backCardImageView.image = UIImage(named: cardStack[1].cardName)
-        Constants.showFront = true
+        K.showFront = true
         checkImageView.alpha = 0
         backCardImageView.alpha = 0
         frontView.center = CGPoint(x: view.center.x, y: view.center.y)
@@ -141,7 +141,7 @@ class VocabViewController: UIViewController {
         cardStack = VocabCardStack().getCards()
         frontCardImageView.image = UIImage(named: cardStack[0].cardName)
         backCardImageView.image = UIImage(named: cardStack[1].cardName)
-        Constants.showFront = true
+        K.showFront = true
     } // End of @IBAction func shuffleButtonTapped
     
     
