@@ -313,6 +313,9 @@
 		BCD013DA25CF525800355B08 /* VocabButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCD013D925CF525800355B08 /* VocabButtonCell.xib */; };
 		BCD013DD25CF52B500355B08 /* VocabButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD013DC25CF52B500355B08 /* VocabButtonCell.swift */; };
 		BCD8B53D24C16C3400DBD408 /* KanjiSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD8B53C24C16C3400DBD408 /* KanjiSelectionViewController.swift */; };
+		BCDFB3D325DC8B2300B48B60 /* VocabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDFB3D225DC8B2300B48B60 /* VocabCollectionViewCell.swift */; };
+		BCDFB3D725DC8C9100B48B60 /* VocabCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCDFB3D625DC8C9100B48B60 /* VocabCollectionViewCell.xib */; };
+		BCDFB3DA25DC94E100B48B60 /* CollectionCellViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDFB3D925DC94E100B48B60 /* CollectionCellViewContent.swift */; };
 		BCEA9DE92509A74A00FF6E94 /* soundsAnimals21.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCEA9DC82509A74800FF6E94 /* soundsAnimals21.m4a */; };
 		BCEA9DEA2509A74A00FF6E94 /* soundsAnimals2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCEA9DC92509A74800FF6E94 /* soundsAnimals2.m4a */; };
 		BCEA9DEB2509A74A00FF6E94 /* soundsAnimals27.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BCEA9DCA2509A74800FF6E94 /* soundsAnimals27.m4a */; };
@@ -660,6 +663,9 @@
 		BCD013D925CF525800355B08 /* VocabButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VocabButtonCell.xib; sourceTree = "<group>"; };
 		BCD013DC25CF52B500355B08 /* VocabButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabButtonCell.swift; sourceTree = "<group>"; };
 		BCD8B53C24C16C3400DBD408 /* KanjiSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiSelectionViewController.swift; sourceTree = "<group>"; };
+		BCDFB3D225DC8B2300B48B60 /* VocabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabCollectionViewCell.swift; sourceTree = "<group>"; };
+		BCDFB3D625DC8C9100B48B60 /* VocabCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VocabCollectionViewCell.xib; sourceTree = "<group>"; };
+		BCDFB3D925DC94E100B48B60 /* CollectionCellViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellViewContent.swift; sourceTree = "<group>"; };
 		BCEA9DC82509A74800FF6E94 /* soundsAnimals21.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsAnimals21.m4a; sourceTree = "<group>"; };
 		BCEA9DC92509A74800FF6E94 /* soundsAnimals2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsAnimals2.m4a; sourceTree = "<group>"; };
 		BCEA9DCA2509A74800FF6E94 /* soundsAnimals27.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsAnimals27.m4a; sourceTree = "<group>"; };
@@ -899,6 +905,8 @@
 				BCBB95B225BE4A9600CFEA56 /* TableCell.swift */,
 				BCD013D925CF525800355B08 /* VocabButtonCell.xib */,
 				BCD013DC25CF52B500355B08 /* VocabButtonCell.swift */,
+				BCDFB3D625DC8C9100B48B60 /* VocabCollectionViewCell.xib */,
+				BCDFB3D225DC8B2300B48B60 /* VocabCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -914,6 +922,7 @@
 				BCA465E125AAA001002848ED /* SystemImageNames.swift */,
 				BCA465E425AAA549002848ED /* K.swift */,
 				BC51D1E425BE72070036DCE4 /* TableViewContent.swift */,
+				BCDFB3D925DC94E100B48B60 /* CollectionCellViewContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1556,6 +1565,7 @@
 				BC06AC0125104E7F0051913A /* soundsHouse31.m4a in Resources */,
 				BC74470F24C3AAA800C54DFF /* soundCombo30.m4a in Resources */,
 				BC06ABDE25104E7F0051913A /* soundsHouse18.m4a in Resources */,
+				BCDFB3D725DC8C9100B48B60 /* VocabCollectionViewCell.xib in Resources */,
 				BC06AB7E25104E3F0051913A /* soundsVegetables10.m4a in Resources */,
 				BC06ABF725104E7F0051913A /* soundsHouse30.m4a in Resources */,
 				BC74472224C3AAA800C54DFF /* soundCombo4.m4a in Resources */,
@@ -1626,6 +1636,8 @@
 				BC5A584224B53F6A00A06BBB /* AppDelegate.swift in Sources */,
 				BC5A584424B53F6A00A06BBB /* SceneDelegate.swift in Sources */,
 				BCD8B53D24C16C3400DBD408 /* KanjiSelectionViewController.swift in Sources */,
+				BCDFB3DA25DC94E100B48B60 /* CollectionCellViewContent.swift in Sources */,
+				BCDFB3D325DC8B2300B48B60 /* VocabCollectionViewCell.swift in Sources */,
 				BC8834B224FE4EDA00D85DDD /* VocabCardStack.swift in Sources */,
 				BC5A9BEA24BFFE2800E43460 /* ComingSoonViewController.swift in Sources */,
 				BCD013DD25CF52B500355B08 /* VocabButtonCell.swift in Sources */,
@@ -1782,14 +1794,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PracticalJapanese/PracticalJapanese.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 676A84J3QT;
 				INFOPLIST_FILE = PracticalJapanese/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanKanno.PracticalJapanese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -1804,14 +1816,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PracticalJapanese/PracticalJapanese.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 676A84J3QT;
 				INFOPLIST_FILE = PracticalJapanese/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanKanno.PracticalJapanese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;

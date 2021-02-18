@@ -26,6 +26,14 @@ struct K {
     static let cellNibName:String = "TableCell"
     static let cellIdentifier:String = "ReusableCell"
     
+    static let collectionViewCellLabelNames:[String] = [
+        "colors", "animals", "ocean animals", "nature", "bugs", "vegetables", "fruits", "house",
+    ]
+    static let collectionViewCellImageNames:[String] = [
+        "color0", "animal0", "oceanAnimals0", "nature0", "bugs1", "vegetables0", "fruits0", "house16",
+    ]
+    static let collectionCellNibName:String = "VocabCollectionViewCell"
+    
     static let buttonCellNibName:String = "VocabButtonCell"
     static let buttonCellIdentifier:String = "vocabCell"
     static let vocabButtonSelection:[String] = [

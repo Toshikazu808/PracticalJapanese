@@ -86,6 +86,7 @@ struct GestureRecognizers {
                     }
                     cardStack.remove(at: 0)
                     checkImageView.alpha = 0
+                    cardSpeaker.alpha = 0
                     K.showFront = true
                     return
                 }

@@ -19,7 +19,9 @@ class VocabViewController: UIViewController {
     @IBOutlet weak var checkImageView: UIImageView!
     @IBOutlet weak var cardSpeaker: UIImageView!
     @IBOutlet weak var shuffleButton: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     var gestureRecognizers = GestureRecognizers()
+    var selectionContent:[CollectionCellViewContent] = []
     
     
     override func viewDidLoad() {
@@ -48,7 +50,6 @@ class VocabViewController: UIViewController {
         checkImageView.alpha = 0
         cardSpeaker.alpha = 0
         cardSpeaker.isUserInteractionEnabled = true
-        
 //        backCardImageView.superview?.sendSubviewToBack(backCardImageView)
         
         let frontCardTapped = UITapGestureRecognizer(target: self, action: #selector(cardTapped))
@@ -59,16 +60,20 @@ class VocabViewController: UIViewController {
         backCardImageView.addGestureRecognizer(backCardTapped)
         let cardSpeakerTapped = UITapGestureRecognizer(target: self, action: #selector(speakerTapped))
         cardSpeakerTapped.numberOfTapsRequired = 1
-        cardSpeaker.addGestureRecognizer(cardSpeakerTapped)        
+        cardSpeaker.addGestureRecognizer(cardSpeakerTapped)
         
-        if let shuffleButtonImage = UIImage(systemName: SystemImageNames.arrowTriangleCirclePath) {
-            shuffleButton.setImage(shuffleButtonImage, for: .normal)
-        } else if let shuffleButtonImage = UIImage(systemName: SystemImageNames.arrowCirclePath) {
-            shuffleButton.setImage(shuffleButtonImage, for: .normal)
-            print("SystemImage '\(SystemImageNames.arrowTriangleCirclePath)' is unavailable.")
-            print("shuffleButton image set to '\(SystemImageNames.arrowCirclePath)' instead.")
+        for i in 0..<K.collectionViewCellImageNames.count {
+            let cellContent = CollectionCellViewContent(selectionLabel: K.collectionViewCellLabelNames[i], selectionImage: UIImage(named: "\(K.collectionViewCellImageNames[i])")!)
+            selectionContent.append(cellContent)
         }
-                
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        let nib = UINib(nibName: K.collectionCellNibName, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: K.collectionCellNibName)
+        collectionView.isUserInteractionEnabled = true
+        collectionView.alwaysBounceHorizontal = true
+        
     } // End of viewDidLoad
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -92,10 +97,6 @@ class VocabViewController: UIViewController {
         K.showFront = true
         K.vocabStackSelection = 0
         K.stackTotal = 0
-        // Reset the number of cards in the stack
-        
-        
-        
     } // End of @IBAction func homeButtonTapped
     
     
@@ -144,37 +145,91 @@ class VocabViewController: UIViewController {
         K.showFront = true
     } // End of @IBAction func shuffleButtonTapped
     
-    
-//    @IBAction func zButtonTapped(_ sender: UIButton) {
-//
-////        if front == true {
-////            backCardImageView.superview?.bringSubviewToFront(backCardImageView)
-////            frontCardImageView.superview?.sendSubviewToBack(frontCardImageView)
-////            front = false
-////        } else {
-////            backCardImageView.superview?.sendSubviewToBack(backCardImageView)
-////            frontCardImageView.superview?.bringSubviewToFront(frontCardImageView)
-////            front = true
-////        }
-//
-//        if front == true {
-//            backView.superview?.bringSubviewToFront(backView)
-//            frontView.superview?.sendSubviewToBack(frontView)
-//            front = false
-//        } else {
-//            backView.superview?.sendSubviewToBack(backView)
-//            frontView.superview?.bringSubviewToFront(frontView)
-//            front = true
-//        }
-//        print(frontCardImageView.superview!)
-//        print(backCardImageView.superview!)
-//        print(backView.superview!)
-//        print(frontView.superview!)
-//        print(mainView.superview!)
-//        print("\n")
-//
-//    } // End of zButtonTapped
-    
-    
-    
 } // End of class VocabViewController
+
+
+extension VocabViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return K.collectionViewCellImageNames.count
+    } // End of numberOfItemsInSection
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print(#function)
+        let content = selectionContent[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.collectionCellNibName, for: indexPath) as! VocabCollectionViewCell
+        cell.imageLabel?.text = content.selectionLabel
+        cell.imageView?.image = content.selectionImage
+        return cell
+    } // End of cellForItemAt
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Cell tapped: \(indexPath.row)")
+        switch indexPath.row {
+        case 0:
+            K.vocabStackSelection = indexPath.row
+            K.stackTotal = K.colorStack.count
+        case 1:
+            K.vocabStackSelection = indexPath.row
+            K.stackTotal = K.animalStack.count
+        case 2:
+            K.vocabStackSelection = indexPath.row
+            K.stackTotal = K.oceanAnimalStack.count
+        case 3:
+            K.vocabStackSelection = indexPath.row
+            K.stackTotal = K.natureStack.count
+        case 4:
+            K.vocabStackSelection = indexPath.row
+            K.stackTotal = K.bugStack.count
+        case 5:
+            K.vocabStackSelection = indexPath.row
+            K.stackTotal = K.vegetableStack.count
+        case 6:
+            K.vocabStackSelection = indexPath.row
+            K.stackTotal = K.fruitStack.count
+        case 7:
+            K.vocabStackSelection = indexPath.row
+            K.stackTotal = K.houseStack.count
+        default:
+            print("Unregistered selection")
+            break
+        }
+        cardStack = VocabCardStack().getCards()
+        frontCardImageView.image = UIImage(named: cardStack[0].cardName)
+        backCardImageView.image = UIImage(named: cardStack[1].cardName)
+        K.showFront = true
+    } // End of didSelectItemAt
+    
+} // End of extension UICollectionViewDelegate & UICollectionViewDataSource
+
+
+//extension VocabViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        print("\nsizeForItemAt called")
+//
+////        let screenSize: CGSize = UIScreen.main.bounds.size
+////        let cellHeight = floor(screenSize.height * cellScale)
+////        let cellWidth = floor(screenSize.width * cellScale)
+////        let cellWidth = collectionView.frame.size.width / 3.5
+////        let cellHeight = collectionView.frame.size.height
+//        
+//        let collectionViewSize: CGSize = collectionView.bounds.size
+//        let cellHeight = collectionViewSize.height * 0.8
+//        let cellWidth = collectionViewSize.width * 0.2
+//        print(collectionViewSize)
+////        let paddingSpace = sectionInsets.left
+////        let availableWidth = view.frame.width - paddingSpace
+////        let widthPerItem = availableWidth / 3.5
+//
+//        return CGSize(width: cellWidth, height: cellHeight)
+//    } // End of sizeForItemAt
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        let screenSize: CGSize = UIScreen.main.bounds.size
+//        let cellHeight = floor(screenSize.height * cellScale)
+//        let cellWidth = floor(screenSize.width * cellScale)
+//        let insetX = (view.bounds.width - cellWidth) / 2.0
+//        let insetY = (view.bounds.height - cellHeight) / 2.0
+//        return UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+//    }
+//
+//} // End of extension UICollectionViewDelegateFlowLayout

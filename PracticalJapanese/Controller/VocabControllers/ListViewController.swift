@@ -164,11 +164,11 @@ class ListViewController: UIViewController {
 
     @IBAction func speakerButtonTapped(_ sender: UIButton) {
         if K.soundOn == false {
-            K.soundOn = true
+            K.soundOn = !K.soundOn
             let speakerIcon = UIImage(systemName: SystemImageNames.speaker)
             speakerButton.setImage(speakerIcon, for: .normal)
         } else {
-            K.soundOn = false
+            K.soundOn = !K.soundOn
             let speakerIcon = UIImage(systemName: SystemImageNames.speakerSlash)
             speakerButton.setImage(speakerIcon, for: .normal)
         }

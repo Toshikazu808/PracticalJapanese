@@ -22,14 +22,14 @@ class Cards {
 
     var isFlippedBool = false
     
-    let animalStack:Int = 34
-    let bugStack:Int = 17
     let colorStack:Int = 11
+    let animalStack:Int = 34
+    let oceanAnimalStack:Int = 20
+    let natureStack:Int = 35
+    let bugStack:Int = 17
+    let vegetableStack:Int = 26
     let fruitStack:Int = 19
     let houseStack:Int = 45
-    let natureStack:Int = 35
-    let oceanAnimalStack:Int = 20
-    let vegetableStack:Int = 26
     
     let vocabFront:[String] = [
         /* 0 */ "color",
