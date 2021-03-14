@@ -91,6 +91,13 @@
 		BC06AC0225104E7F0051913A /* soundsHouse41.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC06ABD225104E7E0051913A /* soundsHouse41.m4a */; };
 		BC06AC0325104E7F0051913A /* soundsHouse24.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC06ABD325104E7E0051913A /* soundsHouse24.m4a */; };
 		BC06AC0425104E7F0051913A /* soundsHouse35.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC06ABD425104E7E0051913A /* soundsHouse35.m4a */; };
+		BC14FEC625E1D3A9008BC2C6 /* Kanji.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14FEC525E1D3A9008BC2C6 /* Kanji.swift */; };
+		BC14FEC925E1D7A8008BC2C6 /* Grade1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14FEC825E1D7A8008BC2C6 /* Grade1.swift */; };
+		BC14FECC25E1DC7F008BC2C6 /* Grade2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14FECB25E1DC7F008BC2C6 /* Grade2.swift */; };
+		BC14FECF25E1DD55008BC2C6 /* Grade3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14FECE25E1DD55008BC2C6 /* Grade3.swift */; };
+		BC14FED225E1DDDE008BC2C6 /* Grade4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14FED125E1DDDE008BC2C6 /* Grade4.swift */; };
+		BC14FED625E1DE0A008BC2C6 /* Grade5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14FED525E1DE0A008BC2C6 /* Grade5.swift */; };
+		BC14FED925E1DE40008BC2C6 /* Grade6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC14FED825E1DE40008BC2C6 /* Grade6.swift */; };
 		BC300E1425B0CAF6005FA415 /* soundsVegetables8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC300E1325B0CAF6005FA415 /* soundsVegetables8.m4a */; };
 		BC300E1725B0CB3B005FA415 /* soundsVegetables20.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC300E1625B0CB3B005FA415 /* soundsVegetables20.m4a */; };
 		BC300E1A25B0CB5B005FA415 /* soundsVegetables25.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BC300E1925B0CB5B005FA415 /* soundsVegetables25.m4a */; };
@@ -438,6 +445,13 @@
 		BC06ABD225104E7E0051913A /* soundsHouse41.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsHouse41.m4a; sourceTree = "<group>"; };
 		BC06ABD325104E7E0051913A /* soundsHouse24.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsHouse24.m4a; sourceTree = "<group>"; };
 		BC06ABD425104E7E0051913A /* soundsHouse35.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsHouse35.m4a; sourceTree = "<group>"; };
+		BC14FEC525E1D3A9008BC2C6 /* Kanji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanji.swift; sourceTree = "<group>"; };
+		BC14FEC825E1D7A8008BC2C6 /* Grade1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade1.swift; sourceTree = "<group>"; };
+		BC14FECB25E1DC7F008BC2C6 /* Grade2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade2.swift; sourceTree = "<group>"; };
+		BC14FECE25E1DD55008BC2C6 /* Grade3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade3.swift; sourceTree = "<group>"; };
+		BC14FED125E1DDDE008BC2C6 /* Grade4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade4.swift; sourceTree = "<group>"; };
+		BC14FED525E1DE0A008BC2C6 /* Grade5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade5.swift; sourceTree = "<group>"; };
+		BC14FED825E1DE40008BC2C6 /* Grade6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade6.swift; sourceTree = "<group>"; };
 		BC300E1325B0CAF6005FA415 /* soundsVegetables8.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsVegetables8.m4a; sourceTree = "<group>"; };
 		BC300E1625B0CB3B005FA415 /* soundsVegetables20.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsVegetables20.m4a; sourceTree = "<group>"; };
 		BC300E1925B0CB5B005FA415 /* soundsVegetables25.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = soundsVegetables25.m4a; sourceTree = "<group>"; };
@@ -923,6 +937,13 @@
 				BCA465E425AAA549002848ED /* K.swift */,
 				BC51D1E425BE72070036DCE4 /* TableViewContent.swift */,
 				BCDFB3D925DC94E100B48B60 /* CollectionCellViewContent.swift */,
+				BC14FEC525E1D3A9008BC2C6 /* Kanji.swift */,
+				BC14FEC825E1D7A8008BC2C6 /* Grade1.swift */,
+				BC14FECB25E1DC7F008BC2C6 /* Grade2.swift */,
+				BC14FECE25E1DD55008BC2C6 /* Grade3.swift */,
+				BC14FED125E1DDDE008BC2C6 /* Grade4.swift */,
+				BC14FED525E1DE0A008BC2C6 /* Grade5.swift */,
+				BC14FED825E1DE40008BC2C6 /* Grade6.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1622,8 +1643,10 @@
 			files = (
 				BC9A513424B9127300C70E9D /* HiraganaKatakanaCardStacks.swift in Sources */,
 				BC5A584624B53F6A00A06BBB /* HomeViewController.swift in Sources */,
+				BC14FED925E1DE40008BC2C6 /* Grade6.swift in Sources */,
 				BC51D1E525BE72070036DCE4 /* TableViewContent.swift in Sources */,
 				BC8834AE24FE46C700D85DDD /* VocabSelectionViewController.swift in Sources */,
+				BC14FECC25E1DC7F008BC2C6 /* Grade2.swift in Sources */,
 				BC37207324B79C2A004BBDE9 /* HiraganaViewController.swift in Sources */,
 				BCEDD99C24BA5CE900A39339 /* Cards.swift in Sources */,
 				BCA465E225AAA001002848ED /* SystemImageNames.swift in Sources */,
@@ -1635,11 +1658,14 @@
 				BCA465E525AAA549002848ED /* K.swift in Sources */,
 				BC5A584224B53F6A00A06BBB /* AppDelegate.swift in Sources */,
 				BC5A584424B53F6A00A06BBB /* SceneDelegate.swift in Sources */,
+				BC14FED625E1DE0A008BC2C6 /* Grade5.swift in Sources */,
 				BCD8B53D24C16C3400DBD408 /* KanjiSelectionViewController.swift in Sources */,
 				BCDFB3DA25DC94E100B48B60 /* CollectionCellViewContent.swift in Sources */,
 				BCDFB3D325DC8B2300B48B60 /* VocabCollectionViewCell.swift in Sources */,
+				BC14FECF25E1DD55008BC2C6 /* Grade3.swift in Sources */,
 				BC8834B224FE4EDA00D85DDD /* VocabCardStack.swift in Sources */,
 				BC5A9BEA24BFFE2800E43460 /* ComingSoonViewController.swift in Sources */,
+				BC14FEC925E1D7A8008BC2C6 /* Grade1.swift in Sources */,
 				BCD013DD25CF52B500355B08 /* VocabButtonCell.swift in Sources */,
 				BCB6E3EF250D4A3A00458777 /* VerticalChartViewController.swift in Sources */,
 				BCBB95B325BE4A9600CFEA56 /* TableCell.swift in Sources */,
@@ -1647,6 +1673,8 @@
 				BC8834B024FE4CC400D85DDD /* VocabViewController.swift in Sources */,
 				BC5A9BE824BF70B000E43460 /* ChartViewController.swift in Sources */,
 				BCB2979025B75A8A00B1C927 /* ThankYouViewController.swift in Sources */,
+				BC14FED225E1DDDE008BC2C6 /* Grade4.swift in Sources */,
+				BC14FEC625E1D3A9008BC2C6 /* Kanji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1723,7 +1751,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1778,7 +1806,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1794,14 +1822,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PracticalJapanese/PracticalJapanese.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 676A84J3QT;
 				INFOPLIST_FILE = PracticalJapanese/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanKanno.PracticalJapanese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -1816,14 +1844,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PracticalJapanese/PracticalJapanese.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 676A84J3QT;
 				INFOPLIST_FILE = PracticalJapanese/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.RyanKanno.PracticalJapanese;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
