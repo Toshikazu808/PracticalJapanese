@@ -38,7 +38,7 @@ struct K {
     static let buttonCellIdentifier:String = "vocabCell"
     static let vocabButtonSelection:[String] = [
         "Colors", "Animals", "Ocean Animals", "Nature",
-        "Bugs", "Vegetables", "Fuits", "House"
+        "Bugs", "Vegetables", "Fruits", "House"
     ]
     
     static let stackOrder:[String] = [
